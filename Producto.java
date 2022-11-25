@@ -1,10 +1,10 @@
 public class Producto{
     private String nombre;
-    private double precio;
+    private int precio;
     private String codigo;
 
     //Contructor
-    public Producto(String nombre, double precio, String codigo){
+    public Producto(String nombre, int precio, String codigo){
         this.nombre = nombre;
         this.precio = precio;
         this.codigo = codigo;
@@ -28,7 +28,7 @@ public class Producto{
         this.nombre = nombre;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 

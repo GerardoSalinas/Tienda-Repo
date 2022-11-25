@@ -114,7 +114,7 @@ public class Lista {
         }else if (posicion == 1){
             insertarAlFrente(dato);
             
-        }else if (posicionFinal(posicion)){//verificar si se quiere insertar al final
+        }else if (posicion == tamLista()){//verificar si se quiere insertar al final
             insertarAlFinal(dato);
         }else{
             
@@ -130,12 +130,16 @@ public class Lista {
         }
     }
 
+    /**
+     * Elimina el nodo en la posicion indicada
+     * @param posicion posicion del elemento que se quiere eliminar
+     */
     public void eliminarEn(int posicion){
         if (estaVacia()){
             System.out.printf("No se puede eliminar en la posicion %d ya que la lista esta vacia",posicion);
         }else if (posicion == 1){
             eliminarAlFrente();
-        }else if (posicionFinal(posicion)){//si se quiere eliminar en la ultima posicion
+        }else if (posicion == tamLista()){//si se quiere eliminar en la ultima posicion
             eliminarDelFinal();
         }else{
             Nodo actual = this.primerNodo;
@@ -160,23 +164,6 @@ public class Lista {
         return (this.primerNodo == null);
     }
 
-
-    /**
-     * Valida si la posicion ingresada corresponde al ultimo nodo
-     * @param posicion posicion en la que se quiere insertar un nodo 
-     * @return verdadero si la posicion ingresada corresponde al ultimo nodo, de otro modo regresa falso
-     */
-
-    public boolean posicionFinal(int posicion){
-        Nodo actual = primerNodo;
-        for (int i = 1; i<posicion; i++){//iteramos a traves de los nodos 
-            actual = actual.getSiguienteNodo();
-        }
-        if (actual.getSiguienteNodo() == null)//si el nodo en la posicion ingresada apunta a null, se trata del ultimo nodo 
-            return true;
-        else//no es el ultimo nodo 
-            return false;
-    }
 
     /**
      * Itera a traves de la lista y cuenta la cantidad de nodos en ella

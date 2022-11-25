@@ -18,8 +18,13 @@ public class PruebaLista {
         nvaLista.insertarEn(2,"Q");
         nvaLista.imprimirLista();//"CQATAR"
 
-        nvaLista.eliminarEn(2);//"CATAR"
+        nvaLista.eliminarEn(6);//"CQATA"
         nvaLista.imprimirLista();
+
+        nvaLista.insertarEn(5, "R");
+        nvaLista.imprimirLista();//"CQATAR"
+
+
 
 
        
