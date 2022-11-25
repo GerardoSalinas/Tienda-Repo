@@ -1,3 +1,5 @@
+package estructuraLista;
+
 public class PruebaLista {
     
 
@@ -11,10 +13,14 @@ public class PruebaLista {
         nvaLista.insertarAlFinal("T");
         nvaLista.insertarAlFinal("A");
         nvaLista.insertarAlFinal("R");
-        nvaLista.insertarAlFrente("2022_");
-        nvaLista.imprimirLista();
+        nvaLista.imprimirLista();//"CATAR"
        
-        
+        nvaLista.insertarEn(2,"Q");
+        nvaLista.imprimirLista();//"CQATAR"
+
+        nvaLista.eliminarEn(2);//"CATAR"
+        nvaLista.imprimirLista();
+
 
        
 

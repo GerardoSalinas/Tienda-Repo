@@ -1,0 +1,15 @@
+100,servilletas,15
+101,aguazul,25
+102,lapiz,9
+103,marcador,15
+104,leche,25
+105,pan,23
+106,churro,22
+107,refresco,14
+108,comida_de_gato,23
+109,comida_de_perro,24
+110,galleta,12
+111,cloro,12
+112,tomate,19
+113,detergente,35
+114,atun,22
