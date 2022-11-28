@@ -1,3 +1,4 @@
+package estructuraPila;
 public class PilaExcepcion extends RuntimeException{
     public PilaExcepcion(){
         this("genérica");

@@ -7,6 +7,33 @@ public class Lista {
 
     private String nombreLista;
 
+    //Getters
+    public Nodo getPrimerNodo() {
+        return primerNodo;
+    }
+    
+    public Nodo getUltimoNodo() {
+        return ultimoNodo;
+    }
+
+    public String getNombreLista() {
+        return nombreLista;
+    }
+
+    //Setters
+    public void setPrimerNodo(Nodo primerNodo) {
+        this.primerNodo = primerNodo;
+    }
+
+    public void setUltimoNodo(Nodo ultimoNodo) {
+        this.ultimoNodo = ultimoNodo;
+    }
+
+    public void setNombreLista(String nombreLista) {
+        this.nombreLista = nombreLista;
+    }
+
+    //Constructor
     public Lista(String nombreLista){
         this.nombreLista = nombreLista;
 

@@ -1,48 +1,30 @@
-public class Cola {
-    private Nodo primerNodo;
-    private Nodo ultimoNodo;
+package estructuraCola;
+import estructuraLista.Lista;
+import estructuraLista.Nodo;
+public class Cola extends Lista{
+    
     private String nombreCola;
 
     public Cola(String nombreCola) {
-        this.nombreCola = nombreCola;
+        super(nombreCola);
     }
 
-    public void insertarPrimerNodo(Object dato){
-        if(estaVacia()){
-            this.primerNodo = this.ultimoNodo = new Nodo(dato);
-        }
+    public void encolar(Object dato){
+        super.insertarAlFinal(dato);
     }
 
-    public void insertarAlFinal(Object dato){
-        if(estaVacia()){
-            this.primerNodo = this.ultimoNodo = new Nodo(dato);
-        }else{
-            Nodo nvoNodo = new Nodo(dato);
-            this.ultimoNodo.setSiguienteNodo(nvoNodo);
-            this.ultimoNodo = nvoNodo;
-        }
+    public Object desencolar(Object dato){
+       return super.eliminarAlFrente();
     }
 
-    public Object eliminarAlFrente(){
-        if(estaVacia())
-            throw new ColaExcepcion(this.nombreCola);
-        
-        Object dato = this.primerNodo.getDato();
-        if(this.primerNodo == this.ultimoNodo)
-            this.primerNodo = this.ultimoNodo = null;
-        else
-            this.primerNodo = this.primerNodo.getSiguienteNodo();
-
-        return dato;
-        
-    }
+    
 
     public void imprimirCola(){
         if(estaVacia())
             System.out.println("La cola: " + this. nombreCola +  " está vacía");
         else{
     
-            Nodo temporal = this.primerNodo;
+            Nodo temporal = this.getPrimerNodo();
             while(temporal.getSiguienteNodo() != null){
                 System.out.println(temporal.getDato());
                 temporal = temporal.getSiguienteNodo();
@@ -53,7 +35,7 @@ public class Cola {
     }
 
     public boolean estaVacia(){        
-        return (this.primerNodo == null);
+        return super.estaVacia();
     }
 
     

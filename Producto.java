@@ -1,10 +1,11 @@
+
 public class Producto{
     private String nombre;
     private int precio;
     private String codigo;
 
     //Contructor
-    public Producto(String nombre, int precio, String codigo){
+    public Producto(String codigo,String nombre,int precio){
         this.nombre = nombre;
         this.precio = precio;
         this.codigo = codigo;
@@ -15,7 +16,7 @@ public class Producto{
         return nombre;
     }
 
-    public double getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
@@ -36,5 +37,9 @@ public class Producto{
         this.codigo = codigo;
     }
     
+    @Override
+    public String toString(){
+        return "\n[codigo]: "+ this.codigo +"\n[nombre]: " + this.nombre + "\n[precio]: " + this.precio + "\n";
+    }
 
 }

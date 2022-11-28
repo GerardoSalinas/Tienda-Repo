@@ -1,55 +1,41 @@
-public class Pila {
-    private Nodo primerNodo;
+package estructuraPila;
+import estructuraLista.Lista;
+import estructuraLista.Nodo;
 
-    private Nodo ultimoNodo;
+
+public class Pila extends Lista{
 
     private String nombrePila;
-
+    
+    //Constructor
     public Pila(String nombrePila) {
+        super(nombrePila);//se llama al constructor de su super clase (Lista)
+    }
+
+    //Getters
+    public String getNombrePila() {
+        return nombrePila;
+    }
+
+    //Setters
+    public void setNombrePila(String nombrePila) {
         this.nombrePila = nombrePila;
     }
 
-    public void insertarPrimerNodo(Object dato){
-        if(estaVacia()){
-            this.primerNodo = this.ultimoNodo = new Nodo(dato);
-        }
+    public void apilar(Object dato){
+        super.insertarAlFinal(dato);
     }
 
-    public void insertarAlFinal(Object dato){
-        if(estaVacia()){
-            this.primerNodo = this.ultimoNodo = new Nodo(dato);
-        }else{
-            Nodo nvoNodo = new Nodo(dato);
-            this.ultimoNodo.setSiguienteNodo(nvoNodo);
-            this.ultimoNodo = nvoNodo;
-        }
-    }
-
-    public Object eliminarDelFinal(){
-        if(estaVacia())
-            throw new PilaExcepcion(this.nombrePila);
-
-        Object dato = this.ultimoNodo.getDato();
-        if(this.primerNodo == this.ultimoNodo)
-            this.primerNodo = this.ultimoNodo = null;
-        else{
-            Nodo temporal = this.primerNodo;
-            while(temporal.getSiguienteNodo() != this.ultimoNodo){
-                temporal = temporal.getSiguienteNodo();
-            }
-            temporal.setSiguienteNodo(null);
-            this.ultimoNodo = temporal;
-        }
-
-        return dato;
+    public Object desapilar(){
+        return super.eliminarDelFinal();
     }
     
 
-    public void imprimirPila(){
+    public void imprimirPila(){//este no se puede cambiar por el metodo de su superclase porque el mensaje no tendria sentido
         if(estaVacia())
             System.out.println("La Pila: " + this. nombrePila +  " está vacía");
         else{
-            Nodo temporal = this.primerNodo;
+            Nodo temporal = this.getPrimerNodo();
             while(temporal.getSiguienteNodo() != null){
                 System.out.println(temporal.getDato());
                 temporal = temporal.getSiguienteNodo();
@@ -61,8 +47,12 @@ public class Pila {
     }
 
     public boolean estaVacia(){        
-        return (this.primerNodo == null);
+        return super.estaVacia();//hace lo mismo que Lista
     }
 
+    public int tamPila(){
+       return  super.tamLista();//hace lo mismo que Lista
+
+    }
     
 }
