@@ -1,5 +1,3 @@
-package estructuraLista;
-
 public class Nodo{
 
     private Object dato;

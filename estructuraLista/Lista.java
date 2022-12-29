@@ -1,4 +1,4 @@
-package estructuraLista; 
+
 public class Lista {
     
     private Nodo primerNodo;
@@ -109,8 +109,6 @@ public class Lista {
         return dato;
     }
 
-
-
     /**
      * Imprime los elementos de la lista
      */
@@ -177,8 +175,6 @@ public class Lista {
             //actual queda en el nodo que esta antes de a posicion a eliminar
             Nodo auxiliar = actual.getSiguienteNodo().getSiguienteNodo();//el nodo que esta despues del que vamos a eliminar
             actual.setSiguienteNodo(auxiliar);
-            
-
         }
     }
 

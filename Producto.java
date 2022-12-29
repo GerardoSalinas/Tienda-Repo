@@ -1,11 +1,11 @@
 
 public class Producto{
     private String nombre;
-    private int precio;
+    private double precio;
     private String codigo;
 
     //Contructor
-    public Producto(String codigo,String nombre,int precio){
+    public Producto(String codigo,String nombre,double precio){
         this.nombre = nombre;
         this.precio = precio;
         this.codigo = codigo;
@@ -16,7 +16,7 @@ public class Producto{
         return nombre;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 

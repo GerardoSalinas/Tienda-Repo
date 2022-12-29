@@ -1,4 +1,3 @@
-package estructuraLista;
 public class ListaExcepcion extends RuntimeException{
     
     public ListaExcepcion(){

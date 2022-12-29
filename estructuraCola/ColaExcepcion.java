@@ -1,4 +1,4 @@
-package estructuraCola;
+
 public class ColaExcepcion extends RuntimeException{
     
     public ColaExcepcion(){

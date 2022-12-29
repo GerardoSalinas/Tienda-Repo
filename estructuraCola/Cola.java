@@ -1,10 +1,8 @@
-package estructuraCola;
-import estructuraLista.Lista;
-import estructuraLista.Nodo;
+
 public class Cola extends Lista{
     
     private String nombreCola;
-
+   
     public Cola(String nombreCola) {
         super(nombreCola);
     }
@@ -17,7 +15,9 @@ public class Cola extends Lista{
        return super.eliminarAlFrente();
     }
 
-    
+    public String getNombreCola() {
+        return super.getNombreLista();
+    }
 
     public void imprimirCola(){
         if(estaVacia())
@@ -33,6 +33,11 @@ public class Cola extends Lista{
             System.out.println(temporal.getDato());
         }
     }
+
+    public int tamCola(){
+        return  super.tamLista();//hace lo mismo que Lista
+ 
+     }
 
     public boolean estaVacia(){        
         return super.estaVacia();

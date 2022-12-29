@@ -1,12 +1,8 @@
-package estructuraPila;
-import estructuraLista.Lista;
-import estructuraLista.Nodo;
-
 
 public class Pila extends Lista{
 
     private String nombrePila;
-    
+        
     //Constructor
     public Pila(String nombrePila) {
         super(nombrePila);//se llama al constructor de su super clase (Lista)
@@ -14,12 +10,12 @@ public class Pila extends Lista{
 
     //Getters
     public String getNombrePila() {
-        return nombrePila;
+        return super.getNombreLista();
     }
 
     //Setters
     public void setNombrePila(String nombrePila) {
-        this.nombrePila = nombrePila;
+        super.setNombreLista(nombrePila);
     }
 
     public void apilar(Object dato){

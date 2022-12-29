@@ -1,4 +1,4 @@
-100,servilletas,15
+100,docena_huevos,15
 101,aguazul,25
 102,lapiz,9
 103,marcador,15
